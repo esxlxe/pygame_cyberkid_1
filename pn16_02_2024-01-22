@@ -1,0 +1,31 @@
+import pygame
+import sys
+
+SCREEN_SIZE = (700, 500)
+FPS = 60
+
+# инициация Pygame
+pygame.init()
+# отображать окно
+screen = pygame.display.set_mode(SCREEN_SIZE)
+# отслеживать время
+clock = pygame.time.Clock()
+
+# surface_ground = pygame.image.load("graphics/ground.png")
+
+while True:
+    # цикл событий
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            # деинициализация pygame
+            pygame.quit()
+            # выход из программы
+            sys.exit()
+
+    # screen.blit(surface_ground, (0, 0))
+
+    # обновление кадров
+    pygame.display.update()
+
+    # Устанавливаем
+    clock.tick(FPS)
